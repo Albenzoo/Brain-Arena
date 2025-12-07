@@ -1,7 +1,6 @@
 import type { Question } from '../models/Question';
 
 export class QuizService {
-  private questions: Question[] = [];
   private readonly BASE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   public async getRandomQuestion(): Promise<Question> {

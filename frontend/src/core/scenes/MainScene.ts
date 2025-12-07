@@ -10,13 +10,6 @@ import { InteractionManager } from '../managers/InteractionManager';
 import { MenuManager, type MenuAction } from '../managers/MenuManager';
 import { Button3D } from '../../components/shared/Button3D';
 
-// Application states
-const AppState = {
-    MENU: 'MENU',
-    PLAYING: 'PLAYING'
-} as const;
-
-type AppState = typeof AppState[keyof typeof AppState];
 
 export class MainScene {
     public scene: THREE.Scene;
@@ -35,7 +28,6 @@ export class MainScene {
 
     private currentQuestion: Question | null = null;
     private isProcessingAnswer: boolean = false;
-    private appState: AppState = AppState.MENU;
 
     constructor(container: Element, animate: () => void) {
         this.renderer = this.setupRenderer(container, animate);
@@ -76,7 +68,6 @@ export class MainScene {
     };
 
     private showMainMenu(): void {
-        this.appState = AppState.MENU;
         this.uiManager.hideAll();
         this.menuManager.show();
         this.interactionManager.setInteractiveObjects(this.menuManager.getInteractiveObjects());
@@ -99,10 +90,8 @@ export class MainScene {
             void session.end();
         }
         this.menuManager.hide();
-        this.appState = AppState.MENU;
     }
     private async startNewGame(): Promise<void> {
-        this.appState = AppState.PLAYING;
         this.gameStateService.startNewGame();
         this.isProcessingAnswer = false;
         await this.loadNextQuestion();

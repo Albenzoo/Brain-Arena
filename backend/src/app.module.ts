@@ -25,6 +25,9 @@ import { QuestionsModule } from './questions/questions.module';
         autoLoadEntities: true,
         synchronize: config.get('NODE_ENV') === 'development',
         logging: config.get('NODE_ENV') === 'development',
+        ssl: config.get('NODE_ENV') === 'production' 
+          ? { rejectUnauthorized: false } 
+          : false,
       }),
     }),
     QuestionsModule,

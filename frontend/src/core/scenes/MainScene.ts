@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { ARButton } from 'three/addons/webxr/ARButton.js';
 import { QuizService } from '../../services/QuizService';
 import { GameStateService } from '../../services/GameStateService';
 import { LoadingSpinner3D } from '../../components/shared/LoadingSpinner3D';
@@ -63,11 +62,6 @@ export class MainScene {
         light.position.set(0.5, 1, 0.25);
         this.scene.add(light);
     }
-
-    private onARButtonClick = (): void => {
-        // Show main menu when entering AR
-        this.showMainMenu();
-    };
 
     private showMainMenu(): void {
         this.uiManager.hideAll();

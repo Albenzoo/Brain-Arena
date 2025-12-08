@@ -36,7 +36,7 @@ startButton?.addEventListener('click', async () => {
 
     // Request AR session senza dom-overlay
     const session = await navigator.xr.requestSession('immersive-ar', {
-      optionalFeatures: ['hit-test', 'local']
+      optionalFeatures: ['hit-test', 'local-floor', 'bounded-floor']
     });
 
     if (session) {

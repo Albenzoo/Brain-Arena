@@ -81,8 +81,8 @@ export class MenuManager {
 
     private createMenu(): void {
         // Menu base position (in front of camera)
-        const menuZ = -1.8;
-        const menuY = 0.7;
+        const menuZ = -2.3;
+        const menuY = 1.8;
 
         // Logo at the top
         this.logo = new LogoPanel3D();

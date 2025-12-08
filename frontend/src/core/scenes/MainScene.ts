@@ -59,8 +59,13 @@ export class MainScene {
 
     private setupLighting(): void {
         const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 3);
-        light.position.set(0.5, 1.5, 0.25);
+        light.position.set(0, 3, 0);
         this.scene.add(light);
+
+        // directional light for better shading
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(2, 3, 2);
+        this.scene.add(directionalLight);
     }
 
     private showMainMenu(): void {

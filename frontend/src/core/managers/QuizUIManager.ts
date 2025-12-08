@@ -15,7 +15,7 @@ export class QuizUIManager {
     public showQuestion(text: string): void {
         if (!this.questionPanel) {
             this.questionPanel = new QuestionPanel3D(text);
-            this.questionPanel.position.set(0, 1.5, -1.7);
+            this.questionPanel.position.set(0, 2.3, -1.8);
             this.scene.add(this.questionPanel);
         } else {
             this.questionPanel.setQuestion(text);

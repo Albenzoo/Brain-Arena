@@ -39,7 +39,7 @@ export class QuestionPanel3D extends THREE.Mesh {
         super(geometry, material);
 
         this.canvas = canvas;
-        this.position.set(0, 1.5, -1.5);
+        this.position.set(0, 1.8, -1.8);
     }
 
     public setQuestion(question: string) {

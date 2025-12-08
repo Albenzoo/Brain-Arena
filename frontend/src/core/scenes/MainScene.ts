@@ -28,6 +28,7 @@ export class MainScene {
     private currentQuestion: Question | null = null;
     private isProcessingAnswer: boolean = false;
 
+
     constructor(container: Element, animate: () => void) {
         this.renderer = this.setupRenderer(container, animate);
         this.scene = new THREE.Scene();
@@ -170,9 +171,11 @@ export class MainScene {
             });
 
             if (result.isCorrect) {
+                const correctSound = new Audio('/assets/sounds/correct_answer.m4a');
                 this.uiManager.setFeedback(panel, 'correct');
+                correctSound.currentTime = 0;
+                correctSound.play();
                 this.gameStateService.advanceLevel();
-
                 setTimeout(() => {
                     if (this.gameStateService.isVictory()) {
                         this.handleVictory();
@@ -181,7 +184,10 @@ export class MainScene {
                     }
                 }, 1500);
             } else {
+                const wrongSound = new Audio('/assets/sounds/wrong_answer.wav');
                 this.uiManager.setFeedback(panel, 'incorrect');
+                wrongSound.currentTime = 0;
+                wrongSound.play();
                 this.gameStateService.setGameOver();
 
                 setTimeout(() => {
@@ -201,6 +207,9 @@ export class MainScene {
     }
 
     private handleVictory(): void {
+        const victorySound = new Audio('/assets/sounds/victory.wav');
+        victorySound.currentTime = 0;
+        victorySound.play();
         this.uiManager.showQuestion("CONGRATULATIONS!\n\nYou completed all the questions!");
         this.uiManager.showOptions(["New Game", "Main Menu"]);
         this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());

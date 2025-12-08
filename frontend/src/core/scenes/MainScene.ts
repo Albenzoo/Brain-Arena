@@ -46,9 +46,11 @@ export class MainScene {
         this.interactionManager.onObjectSelected(this.handleObjectSelection.bind(this));
         this.menuManager.onAction(this.handleMenuAction.bind(this));
 
-        const arButton = ARButton.createButton(this.renderer);
-        document.body.appendChild(arButton);
-        arButton.addEventListener('click', this.onARButtonClick);
+        // Listen for AR session start event
+        this.renderer.xr.addEventListener('sessionstart', () => {
+            this.showMainMenu();
+        });
+
         window.addEventListener('resize', this.onWindowResize.bind(this));
     }
 

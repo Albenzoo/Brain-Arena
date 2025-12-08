@@ -1,22 +1,73 @@
 import './style.css';
-import * as THREE from 'three';
 import { MainScene } from './core/scenes/MainScene';
 
+const canvas = document.getElementById('app') as HTMLCanvasElement;
+const startButton = document.getElementById('start-ar-button');
+const landingPage = document.getElementById('landing-page');
 
+let mainScene: MainScene | null = null;
 
-const container = document.querySelector('#app');
-if (!container) {
-  throw new Error("#app element not found in the DOM. Make sure it exists.");
-}
-
-// main scena instance
-const mainScene = new MainScene(container, animate);
-const clock = new THREE.Clock();
-// Funzione di animazione da passare alla scena
-function animate(): void {
-  const delta = clock.getDelta();
+function animate() {
   if (mainScene) {
-    mainScene.update(delta);
+    mainScene.update(0.016); // ~60fps
     mainScene.renderer.render(mainScene.scene, mainScene.camera);
   }
 }
+
+// initialize MainScene
+mainScene = new MainScene(canvas, animate);
+
+// Manage AR session start
+startButton?.addEventListener('click', async () => {
+  if (!mainScene) return;
+
+  try {
+    // Verifica supporto AR
+    if (!navigator.xr) {
+      alert('WebXR not supported on this browser');
+      return;
+    }
+
+    const supported = await navigator.xr.isSessionSupported('immersive-ar');
+    if (!supported) {
+      alert('AR not supported on this device');
+      return;
+    }
+
+    // Request AR session senza dom-overlay
+    const session = await navigator.xr.requestSession('immersive-ar', {
+      optionalFeatures: ['hit-test']
+    });
+
+    if (session) {
+      // Set reference space and start session
+      mainScene.renderer.xr.setReferenceSpaceType('viewer');
+
+      await mainScene.renderer.xr.setSession(session);
+
+      // Hide the landing page
+      if (landingPage) {
+        landingPage.style.display = 'none';
+      }
+
+      // Show the canvas
+      if (canvas) {
+        canvas.style.display = 'block';
+      }
+
+      // Show the menu when AR session starts
+      session.addEventListener('end', () => {
+        // When AR ends, return to the landing page
+        if (landingPage) {
+          landingPage.style.display = 'flex';
+        }
+        if (canvas) {
+          canvas.style.display = 'none';
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error starting AR session:', error);
+    alert('Errore nell\'avvio AR: ' + (error as Error).message);
+  }
+});

@@ -5,18 +5,23 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/questions/check
+  url: {{baseUrl}}/questions/check?lang=en
   body: json
   auth: inherit
 }
 
+params:query {
+  lang: en
+}
+
 body:json {
   {
-    "questionId": 17,
-    "selectedAnswer": "Charles Babbage"
+    "questionId": 1,
+    "selectedAnswer": "Mercury"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

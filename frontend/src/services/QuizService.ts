@@ -21,7 +21,8 @@ export class QuizService {
   }
 
   public async checkAnswer(payload: { questionId: number; selectedAnswer: string }): Promise<{ isCorrect: boolean }> {
-    const response = await fetch(`${this.BASE_API_URL}/questions/check`, {
+    const lang = this.localization.getCurrentLanguage();
+    const response = await fetch(`${this.BASE_API_URL}/questions/check?lang=${lang}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

@@ -5,11 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/questions/random
+  url: {{baseUrl}}/questions/random?lang=it
   body: none
   auth: inherit
 }
 
+params:query {
+  lang: it
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }

@@ -1,0 +1,1771 @@
+[
+  {
+    "difficulty": "easy",
+    "category": "Astronomy",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale pianeta è più vicino al Sole?",
+        "options": ["Venere", "Mercurio", "Marte", "Terra"],
+        "correctAnswer": "Mercurio"
+      },
+      {
+        "language": "en",
+        "text": "Which planet is closest to the Sun?",
+        "options": ["Venus", "Mercury", "Mars", "Earth"],
+        "correctAnswer": "Mercury"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la capitale della Francia?",
+        "options": ["Berlino", "Madrid", "Parigi", "Roma"],
+        "correctAnswer": "Parigi"
+      },
+      {
+        "language": "en",
+        "text": "What is the capital of France?",
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "correctAnswer": "Paris"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Literature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scritto \"Romeo e Giulietta\"?",
+        "options": ["Shakespeare", "Dante", "Goethe", "Cervantes"],
+        "correctAnswer": "Shakespeare"
+      },
+      {
+        "language": "en",
+        "text": "Who wrote \"Romeo and Juliet\"?",
+        "options": ["Shakespeare", "Dante", "Goethe", "Cervantes"],
+        "correctAnswer": "Shakespeare"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'oceano più grande della Terra?",
+        "options": ["Atlantico", "Indiano", "Artico", "Pacifico"],
+        "correctAnswer": "Pacifico"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest ocean on Earth?",
+        "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+        "correctAnswer": "Pacific"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Chemistry",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale elemento ha il simbolo chimico 'O'?",
+        "options": ["Ossigeno", "Oro", "Ferro", "Argento"],
+        "correctAnswer": "Ossigeno"
+      },
+      {
+        "language": "en",
+        "text": "Which element has the chemical symbol 'O'?",
+        "options": ["Oxygen", "Gold", "Iron", "Silver"],
+        "correctAnswer": "Oxygen"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Mathematics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la radice quadrata di 64?",
+        "options": ["6", "8", "7", "9"],
+        "correctAnswer": "8"
+      },
+      {
+        "language": "en",
+        "text": "What is the square root of 64?",
+        "options": ["6", "8", "7", "9"],
+        "correctAnswer": "8"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Art",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha dipinto la Gioconda?",
+        "options": [
+          "Michelangelo",
+          "Leonardo da Vinci",
+          "Raffaello",
+          "Van Gogh"
+        ],
+        "correctAnswer": "Leonardo da Vinci"
+      },
+      {
+        "language": "en",
+        "text": "Who painted the Mona Lisa?",
+        "options": ["Michelangelo", "Leonardo da Vinci", "Raphael", "Van Gogh"],
+        "correctAnswer": "Leonardo da Vinci"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale paese è conosciuto come la Terra del Sol Levante?",
+        "options": ["Cina", "Giappone", "Tailandia", "Corea del Sud"],
+        "correctAnswer": "Giappone"
+      },
+      {
+        "language": "en",
+        "text": "Which country is known as the Land of the Rising Sun?",
+        "options": ["China", "Japan", "Thailand", "South Korea"],
+        "correctAnswer": "Japan"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Science",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la sostanza naturale più dura?",
+        "options": ["Oro", "Diamante", "Ferro", "Quarzo"],
+        "correctAnswer": "Diamante"
+      },
+      {
+        "language": "en",
+        "text": "What is the hardest natural substance?",
+        "options": ["Gold", "Diamond", "Iron", "Quartz"],
+        "correctAnswer": "Diamond"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Biology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale gas assorbono le piante dall'atmosfera?",
+        "options": ["Ossigeno", "Azoto", "Anidride Carbonica", "Idrogeno"],
+        "correctAnswer": "Anidride Carbonica"
+      },
+      {
+        "language": "en",
+        "text": "Which gas do plants absorb from the atmosphere?",
+        "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+        "correctAnswer": "Carbon Dioxide"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Animals",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il mammifero più grande del mondo?",
+        "options": ["Elefante", "Balena Blu", "Giraffa", "Squalo Bianco"],
+        "correctAnswer": "Balena Blu"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest mammal in the world?",
+        "options": ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+        "correctAnswer": "Blue Whale"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Music",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quante note ci sono nella scala musicale occidentale?",
+        "options": ["5", "7", "10", "12"],
+        "correctAnswer": "7"
+      },
+      {
+        "language": "en",
+        "text": "How many notes are in the Western musical scale?",
+        "options": ["5", "7", "10", "12"],
+        "correctAnswer": "7"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Sports",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanti giocatori ci sono in una squadra di calcio?",
+        "options": ["9", "10", "11", "12"],
+        "correctAnswer": "11"
+      },
+      {
+        "language": "en",
+        "text": "How many players are on a soccer team?",
+        "options": ["9", "10", "11", "12"],
+        "correctAnswer": "11"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il fiume più lungo del mondo?",
+        "options": ["Nilo", "Mississipi", "Gange", "Danubio"],
+        "correctAnswer": "Nilo"
+      },
+      {
+        "language": "en",
+        "text": "What is the longest river in the world?",
+        "options": ["Nile", "Mississippi", "Ganges", "Danube"],
+        "correctAnswer": "Nile"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "History",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In che anno Cristoforo Colombo scoprì l'America?",
+        "options": ["1492", "1500", "1450", "1520"],
+        "correctAnswer": "1492"
+      },
+      {
+        "language": "en",
+        "text": "In what year did Christopher Columbus discover America?",
+        "options": ["1492", "1500", "1450", "1520"],
+        "correctAnswer": "1492"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Cinema",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha diretto il film \"E.T. l'extraterrestre\"?",
+        "options": [
+          "George Lucas",
+          "Steven Spielberg",
+          "James Cameron",
+          "Ridley Scott"
+        ],
+        "correctAnswer": "Steven Spielberg"
+      },
+      {
+        "language": "en",
+        "text": "Who directed the film \"E.T. the Extra-Terrestrial\"?",
+        "options": [
+          "George Lucas",
+          "Steven Spielberg",
+          "James Cameron",
+          "Ridley Scott"
+        ],
+        "correctAnswer": "Steven Spielberg"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Mathematics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanto fa 7 x 8?",
+        "options": ["54", "56", "63", "64"],
+        "correctAnswer": "56"
+      },
+      {
+        "language": "en",
+        "text": "What is 7 x 8?",
+        "options": ["54", "56", "63", "64"],
+        "correctAnswer": "56"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Technology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Cosa significa \"WWW\" in un indirizzo web?",
+        "options": [
+          "World Wide Web",
+          "World Web Wide",
+          "Wide World Web",
+          "Web World Wide"
+        ],
+        "correctAnswer": "World Wide Web"
+      },
+      {
+        "language": "en",
+        "text": "What does \"WWW\" stand for in a web address?",
+        "options": [
+          "World Wide Web",
+          "World Web Wide",
+          "Wide World Web",
+          "Web World Wide"
+        ],
+        "correctAnswer": "World Wide Web"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Animals",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'animale più veloce del mondo?",
+        "options": ["Leone", "Ghepardo", "Gazzella", "Leopardo"],
+        "correctAnswer": "Ghepardo"
+      },
+      {
+        "language": "en",
+        "text": "What is the fastest land animal in the world?",
+        "options": ["Lion", "Cheetah", "Gazelle", "Leopard"],
+        "correctAnswer": "Cheetah"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la montagna più alta del mondo?",
+        "options": ["K2", "Monte Bianco", "Monte Everest", "Kilimanjaro"],
+        "correctAnswer": "Monte Everest"
+      },
+      {
+        "language": "en",
+        "text": "What is the highest mountain in the world?",
+        "options": ["K2", "Mont Blanc", "Mount Everest", "Kilimanjaro"],
+        "correctAnswer": "Mount Everest"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Biology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanti cuori ha un polpo?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": "3"
+      },
+      {
+        "language": "en",
+        "text": "How many hearts does an octopus have?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": "3"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Food",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Da quale paese proviene la pizza?",
+        "options": ["Francia", "Spagna", "Grecia", "Italia"],
+        "correctAnswer": "Italia"
+      },
+      {
+        "language": "en",
+        "text": "Which country does pizza come from?",
+        "options": ["France", "Spain", "Greece", "Italy"],
+        "correctAnswer": "Italy"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Astronomy",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il pianeta più grande del sistema solare?",
+        "options": ["Saturno", "Nettuno", "Giove", "Urano"],
+        "correctAnswer": "Giove"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest planet in the solar system?",
+        "options": ["Saturn", "Neptune", "Jupiter", "Uranus"],
+        "correctAnswer": "Jupiter"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Colors",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanti colori ha un arcobaleno?",
+        "options": ["5", "6", "7", "8"],
+        "correctAnswer": "7"
+      },
+      {
+        "language": "en",
+        "text": "How many colors are in a rainbow?",
+        "options": ["5", "6", "7", "8"],
+        "correctAnswer": "7"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Nature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale albero produce le ghiande?",
+        "options": ["Pino", "Quercia", "Faggio", "Castagno"],
+        "correctAnswer": "Quercia"
+      },
+      {
+        "language": "en",
+        "text": "Which tree produces acorns?",
+        "options": ["Pine", "Oak", "Beech", "Chestnut"],
+        "correctAnswer": "Oak"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Time",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanti giorni ci sono in un anno bisestile?",
+        "options": ["364", "365", "366", "367"],
+        "correctAnswer": "366"
+      },
+      {
+        "language": "en",
+        "text": "How many days are in a leap year?",
+        "options": ["364", "365", "366", "367"],
+        "correctAnswer": "366"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geometry",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quanti lati ha un triangolo?",
+        "options": ["2", "3", "4", "5"],
+        "correctAnswer": "3"
+      },
+      {
+        "language": "en",
+        "text": "How many sides does a triangle have?",
+        "options": ["2", "3", "4", "5"],
+        "correctAnswer": "3"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Music",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi è conosciuto come il \"Re del Pop\"?",
+        "options": [
+          "Elvis Presley",
+          "Michael Jackson",
+          "Prince",
+          "Freddie Mercury"
+        ],
+        "correctAnswer": "Michael Jackson"
+      },
+      {
+        "language": "en",
+        "text": "Who is known as the \"King of Pop\"?",
+        "options": [
+          "Elvis Presley",
+          "Michael Jackson",
+          "Prince",
+          "Freddie Mercury"
+        ],
+        "correctAnswer": "Michael Jackson"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Literature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scritto \"Il Piccolo Principe\"?",
+        "options": [
+          "Jules Verne",
+          "Antoine de Saint-Exupéry",
+          "Victor Hugo",
+          "Alexandre Dumas"
+        ],
+        "correctAnswer": "Antoine de Saint-Exupéry"
+      },
+      {
+        "language": "en",
+        "text": "Who wrote \"The Little Prince\"?",
+        "options": [
+          "Jules Verne",
+          "Antoine de Saint-Exupéry",
+          "Victor Hugo",
+          "Alexandre Dumas"
+        ],
+        "correctAnswer": "Antoine de Saint-Exupéry"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Mythology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Nella mitologia greca, chi era il re degli dei?",
+        "options": ["Poseidone", "Ade", "Zeus", "Apollo"],
+        "correctAnswer": "Zeus"
+      },
+      {
+        "language": "en",
+        "text": "In Greek mythology, who was the king of the gods?",
+        "options": ["Poseidon", "Hades", "Zeus", "Apollo"],
+        "correctAnswer": "Zeus"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il continente più grande?",
+        "options": ["Africa", "Europa", "Asia", "America"],
+        "correctAnswer": "Asia"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest continent?",
+        "options": ["Africa", "Europe", "Asia", "America"],
+        "correctAnswer": "Asia"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Weather",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la temperatura di congelamento dell'acqua in gradi Celsius?",
+        "options": ["-10°C", "0°C", "10°C", "32°C"],
+        "correctAnswer": "0°C"
+      },
+      {
+        "language": "en",
+        "text": "What is the freezing temperature of water in Celsius?",
+        "options": ["-10°C", "0°C", "10°C", "32°C"],
+        "correctAnswer": "0°C"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Body",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quante ossa ha il corpo umano adulto?",
+        "options": ["186", "206", "226", "246"],
+        "correctAnswer": "206"
+      },
+      {
+        "language": "en",
+        "text": "How many bones does the adult human body have?",
+        "options": ["186", "206", "226", "246"],
+        "correctAnswer": "206"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Architecture",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In quale città si trova la Torre Eiffel?",
+        "options": ["Londra", "Berlino", "Parigi", "Roma"],
+        "correctAnswer": "Parigi"
+      },
+      {
+        "language": "en",
+        "text": "In which city is the Eiffel Tower located?",
+        "options": ["London", "Berlin", "Paris", "Rome"],
+        "correctAnswer": "Paris"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Language",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la lingua più parlata al mondo come lingua madre?",
+        "options": ["Inglese", "Spagnolo", "Mandarino", "Hindi"],
+        "correctAnswer": "Mandarino"
+      },
+      {
+        "language": "en",
+        "text": "What is the most spoken language in the world as a native language?",
+        "options": ["English", "Spanish", "Mandarin", "Hindi"],
+        "correctAnswer": "Mandarin"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Insects",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale insetto produce il miele?",
+        "options": ["Vespa", "Ape", "Calabrone", "Formica"],
+        "correctAnswer": "Ape"
+      },
+      {
+        "language": "en",
+        "text": "Which insect produces honey?",
+        "options": ["Wasp", "Bee", "Hornet", "Ant"],
+        "correctAnswer": "Bee"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Planets",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale pianeta è conosciuto come il Pianeta Rosso?",
+        "options": ["Venere", "Giove", "Marte", "Saturno"],
+        "correctAnswer": "Marte"
+      },
+      {
+        "language": "en",
+        "text": "Which planet is known as the Red Planet?",
+        "options": ["Venus", "Jupiter", "Mars", "Saturn"],
+        "correctAnswer": "Mars"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Transportation",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha inventato l'aeroplano?",
+        "options": [
+          "Thomas Edison",
+          "I Fratelli Wright",
+          "Henry Ford",
+          "Nikola Tesla"
+        ],
+        "correctAnswer": "I Fratelli Wright"
+      },
+      {
+        "language": "en",
+        "text": "Who invented the airplane?",
+        "options": [
+          "Thomas Edison",
+          "The Wright Brothers",
+          "Henry Ford",
+          "Nikola Tesla"
+        ],
+        "correctAnswer": "The Wright Brothers"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Ocean",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'animale marino più grande?",
+        "options": ["Squalo Balena", "Balena Blu", "Orca", "Capodoglio"],
+        "correctAnswer": "Balena Blu"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest marine animal?",
+        "options": ["Whale Shark", "Blue Whale", "Orca", "Sperm Whale"],
+        "correctAnswer": "Blue Whale"
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "category": "Currency",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la valuta ufficiale del Regno Unito?",
+        "options": ["Euro", "Dollaro", "Sterlina", "Corona"],
+        "correctAnswer": "Sterlina"
+      },
+      {
+        "language": "en",
+        "text": "What is the official currency of the United Kingdom?",
+        "options": ["Euro", "Dollar", "Pound", "Crown"],
+        "correctAnswer": "Pound"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la capitale dell'Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+        "correctAnswer": "Canberra"
+      },
+      {
+        "language": "en",
+        "text": "What is the capital of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+        "correctAnswer": "Canberra"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Medicine",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scoperto la penicillina?",
+        "options": [
+          "Marie Curie",
+          "Alexander Fleming",
+          "Louis Pasteur",
+          "Isaac Newton"
+        ],
+        "correctAnswer": "Alexander Fleming"
+      },
+      {
+        "language": "en",
+        "text": "Who discovered penicillin?",
+        "options": [
+          "Marie Curie",
+          "Alexander Fleming",
+          "Louis Pasteur",
+          "Isaac Newton"
+        ],
+        "correctAnswer": "Alexander Fleming"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Mathematics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il numero primo più piccolo?",
+        "options": ["1", "2", "3", "5"],
+        "correctAnswer": "2"
+      },
+      {
+        "language": "en",
+        "text": "What is the smallest prime number?",
+        "options": ["1", "2", "3", "5"],
+        "correctAnswer": "2"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Astronomy",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale pianeta ha più lune?",
+        "options": ["Terra", "Marte", "Giove", "Saturno"],
+        "correctAnswer": "Saturno"
+      },
+      {
+        "language": "en",
+        "text": "Which planet has the most moons?",
+        "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+        "correctAnswer": "Saturn"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Chemistry",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la formula chimica del sale da cucina?",
+        "options": ["NaCl", "KCl", "CaCO3", "H2O"],
+        "correctAnswer": "NaCl"
+      },
+      {
+        "language": "en",
+        "text": "What is the chemical formula for table salt?",
+        "options": ["NaCl", "KCl", "CaCO3", "H2O"],
+        "correctAnswer": "NaCl"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Computer Science",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi è conosciuto come il padre dei computer?",
+        "options": [
+          "Alan Turing",
+          "Charles Babbage",
+          "Bill Gates",
+          "Steve Jobs"
+        ],
+        "correctAnswer": "Charles Babbage"
+      },
+      {
+        "language": "en",
+        "text": "Who is known as the father of computers?",
+        "options": [
+          "Alan Turing",
+          "Charles Babbage",
+          "Bill Gates",
+          "Steve Jobs"
+        ],
+        "correctAnswer": "Charles Babbage"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "History",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In che anno è finita la Seconda Guerra Mondiale?",
+        "options": ["1942", "1945", "1948", "1950"],
+        "correctAnswer": "1945"
+      },
+      {
+        "language": "en",
+        "text": "Which year did World War II end?",
+        "options": ["1942", "1945", "1948", "1950"],
+        "correctAnswer": "1945"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Literature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scritto \"1984\"?",
+        "options": [
+          "Aldous Huxley",
+          "George Orwell",
+          "Ray Bradbury",
+          "J.R.R. Tolkien"
+        ],
+        "correctAnswer": "George Orwell"
+      },
+      {
+        "language": "en",
+        "text": "Who wrote \"1984\"?",
+        "options": [
+          "Aldous Huxley",
+          "George Orwell",
+          "Ray Bradbury",
+          "J.R.R. Tolkien"
+        ],
+        "correctAnswer": "George Orwell"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Art",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In quale museo si trova il dipinto \"La Notte Stellata\" di Van Gogh?",
+        "options": ["Louvre", "MoMA", "Uffizi", "Prado"],
+        "correctAnswer": "MoMA"
+      },
+      {
+        "language": "en",
+        "text": "In which museum is Van Gogh's \"Starry Night\" painting located?",
+        "options": ["Louvre", "MoMA", "Uffizi", "Prado"],
+        "correctAnswer": "MoMA"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Biology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'organo più grande del corpo umano?",
+        "options": ["Fegato", "Cervello", "Pelle", "Polmoni"],
+        "correctAnswer": "Pelle"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest organ of the human body?",
+        "options": ["Liver", "Brain", "Skin", "Lungs"],
+        "correctAnswer": "Skin"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale paese ha più isole al mondo?",
+        "options": ["Indonesia", "Filippine", "Svezia", "Giappone"],
+        "correctAnswer": "Svezia"
+      },
+      {
+        "language": "en",
+        "text": "Which country has the most islands in the world?",
+        "options": ["Indonesia", "Philippines", "Sweden", "Japan"],
+        "correctAnswer": "Sweden"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Music",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale compositore era sordo quando compose la Nona Sinfonia?",
+        "options": ["Mozart", "Bach", "Beethoven", "Chopin"],
+        "correctAnswer": "Beethoven"
+      },
+      {
+        "language": "en",
+        "text": "Which composer was deaf when he composed the Ninth Symphony?",
+        "options": ["Mozart", "Bach", "Beethoven", "Chopin"],
+        "correctAnswer": "Beethoven"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Science",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la velocità della luce nel vuoto?",
+        "options": [
+          "200.000 km/s",
+          "300.000 km/s",
+          "400.000 km/s",
+          "500.000 km/s"
+        ],
+        "correctAnswer": "300.000 km/s"
+      },
+      {
+        "language": "en",
+        "text": "What is the speed of light in a vacuum?",
+        "options": [
+          "200,000 km/s",
+          "300,000 km/s",
+          "400,000 km/s",
+          "500,000 km/s"
+        ],
+        "correctAnswer": "300,000 km/s"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "History",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi fu il primo imperatore romano?",
+        "options": ["Giulio Cesare", "Augusto", "Nerone", "Marco Aurelio"],
+        "correctAnswer": "Augusto"
+      },
+      {
+        "language": "en",
+        "text": "Who was the first Roman emperor?",
+        "options": ["Julius Caesar", "Augustus", "Nero", "Marcus Aurelius"],
+        "correctAnswer": "Augustus"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Technology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In che anno è stato lanciato il primo iPhone?",
+        "options": ["2005", "2007", "2009", "2011"],
+        "correctAnswer": "2007"
+      },
+      {
+        "language": "en",
+        "text": "In what year was the first iPhone launched?",
+        "options": ["2005", "2007", "2009", "2011"],
+        "correctAnswer": "2007"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Cinema",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale film ha vinto più Oscar nella storia?",
+        "options": [
+          "Titanic",
+          "Ben-Hur",
+          "Il Signore degli Anelli: Il Ritorno del Re",
+          "Tutti i precedenti"
+        ],
+        "correctAnswer": "Tutti i precedenti"
+      },
+      {
+        "language": "en",
+        "text": "Which film has won the most Oscars in history?",
+        "options": [
+          "Titanic",
+          "Ben-Hur",
+          "The Lord of the Rings: The Return of the King",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Sports",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In quale sport si usa il termine \"love\" per indicare lo zero?",
+        "options": ["Golf", "Tennis", "Cricket", "Badminton"],
+        "correctAnswer": "Tennis"
+      },
+      {
+        "language": "en",
+        "text": "In which sport is the term \"love\" used to indicate zero?",
+        "options": ["Golf", "Tennis", "Cricket", "Badminton"],
+        "correctAnswer": "Tennis"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Language",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale lingua usa l'alfabeto cirillico?",
+        "options": ["Polacco", "Ungherese", "Russo", "Rumeno"],
+        "correctAnswer": "Russo"
+      },
+      {
+        "language": "en",
+        "text": "Which language uses the Cyrillic alphabet?",
+        "options": ["Polish", "Hungarian", "Russian", "Romanian"],
+        "correctAnswer": "Russian"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Mythology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Nella mitologia nordica, chi era il dio del tuono?",
+        "options": ["Odino", "Thor", "Loki", "Freyr"],
+        "correctAnswer": "Thor"
+      },
+      {
+        "language": "en",
+        "text": "In Norse mythology, who was the god of thunder?",
+        "options": ["Odin", "Thor", "Loki", "Freyr"],
+        "correctAnswer": "Thor"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Physics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'unità di misura della forza nel Sistema Internazionale?",
+        "options": ["Joule", "Newton", "Watt", "Pascal"],
+        "correctAnswer": "Newton"
+      },
+      {
+        "language": "en",
+        "text": "What is the unit of measurement for force in the International System?",
+        "options": ["Joule", "Newton", "Watt", "Pascal"],
+        "correctAnswer": "Newton"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Architecture",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha progettato la Cupola di Santa Maria del Fiore a Firenze?",
+        "options": ["Michelangelo", "Brunelleschi", "Donatello", "Giotto"],
+        "correctAnswer": "Brunelleschi"
+      },
+      {
+        "language": "en",
+        "text": "Who designed the dome of Santa Maria del Fiore in Florence?",
+        "options": ["Michelangelo", "Brunelleschi", "Donatello", "Giotto"],
+        "correctAnswer": "Brunelleschi"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Animals",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale animale può dormire in piedi?",
+        "options": ["Mucca", "Cavallo", "Giraffa", "Elefante"],
+        "correctAnswer": "Cavallo"
+      },
+      {
+        "language": "en",
+        "text": "Which animal can sleep standing up?",
+        "options": ["Cow", "Horse", "Giraffe", "Elephant"],
+        "correctAnswer": "Horse"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Chemistry",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il numero atomico del carbonio?",
+        "options": ["4", "6", "8", "12"],
+        "correctAnswer": "6"
+      },
+      {
+        "language": "en",
+        "text": "What is the atomic number of carbon?",
+        "options": ["4", "6", "8", "12"],
+        "correctAnswer": "6"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale città è attraversata dal fiume Tamigi?",
+        "options": ["Parigi", "Londra", "Amsterdam", "Dublino"],
+        "correctAnswer": "Londra"
+      },
+      {
+        "language": "en",
+        "text": "Which city is crossed by the Thames River?",
+        "options": ["Paris", "London", "Amsterdam", "Dublin"],
+        "correctAnswer": "London"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Food",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'ingrediente principale del guacamole?",
+        "options": ["Pomodoro", "Avocado", "Cetriolo", "Peperone"],
+        "correctAnswer": "Avocado"
+      },
+      {
+        "language": "en",
+        "text": "What is the main ingredient of guacamole?",
+        "options": ["Tomato", "Avocado", "Cucumber", "Pepper"],
+        "correctAnswer": "Avocado"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Literature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scritto \"Il Nome della Rosa\"?",
+        "options": [
+          "Italo Calvino",
+          "Umberto Eco",
+          "Alessandro Manzoni",
+          "Dante Alighieri"
+        ],
+        "correctAnswer": "Umberto Eco"
+      },
+      {
+        "language": "en",
+        "text": "Who wrote \"The Name of the Rose\"?",
+        "options": [
+          "Italo Calvino",
+          "Umberto Eco",
+          "Alessandro Manzoni",
+          "Dante Alighieri"
+        ],
+        "correctAnswer": "Umberto Eco"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Space",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale fu la prima nazione a mandare un uomo nello spazio?",
+        "options": ["Stati Uniti", "Unione Sovietica", "Cina", "Francia"],
+        "correctAnswer": "Unione Sovietica"
+      },
+      {
+        "language": "en",
+        "text": "Which was the first nation to send a man into space?",
+        "options": ["United States", "Soviet Union", "China", "France"],
+        "correctAnswer": "Soviet Union"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Nature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è l'albero più alto del mondo?",
+        "options": ["Sequoia", "Baobab", "Eucalipto", "Quercia"],
+        "correctAnswer": "Sequoia"
+      },
+      {
+        "language": "en",
+        "text": "What is the tallest tree in the world?",
+        "options": ["Sequoia", "Baobab", "Eucalyptus", "Oak"],
+        "correctAnswer": "Sequoia"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Music",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale band ha cantato \"Bohemian Rhapsody\"?",
+        "options": ["The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"],
+        "correctAnswer": "Queen"
+      },
+      {
+        "language": "en",
+        "text": "Which band sang \"Bohemian Rhapsody\"?",
+        "options": ["The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"],
+        "correctAnswer": "Queen"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "History",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In quale anno cadde il Muro di Berlino?",
+        "options": ["1987", "1989", "1991", "1993"],
+        "correctAnswer": "1989"
+      },
+      {
+        "language": "en",
+        "text": "In which year did the Berlin Wall fall?",
+        "options": ["1987", "1989", "1991", "1993"],
+        "correctAnswer": "1989"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Economics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale paese è il maggiore produttore di caffè al mondo?",
+        "options": ["Colombia", "Vietnam", "Brasile", "Etiopia"],
+        "correctAnswer": "Brasile"
+      },
+      {
+        "language": "en",
+        "text": "Which country is the largest coffee producer in the world?",
+        "options": ["Colombia", "Vietnam", "Brazil", "Ethiopia"],
+        "correctAnswer": "Brazil"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Technology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha fondato Microsoft?",
+        "options": [
+          "Steve Jobs",
+          "Bill Gates",
+          "Mark Zuckerberg",
+          "Larry Page"
+        ],
+        "correctAnswer": "Bill Gates"
+      },
+      {
+        "language": "en",
+        "text": "Who founded Microsoft?",
+        "options": [
+          "Steve Jobs",
+          "Bill Gates",
+          "Mark Zuckerberg",
+          "Larry Page"
+        ],
+        "correctAnswer": "Bill Gates"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Art",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scolpito il David?",
+        "options": ["Donatello", "Michelangelo", "Bernini", "Canova"],
+        "correctAnswer": "Michelangelo"
+      },
+      {
+        "language": "en",
+        "text": "Who sculpted the David?",
+        "options": ["Donatello", "Michelangelo", "Bernini", "Canova"],
+        "correctAnswer": "Michelangelo"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Biology",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale gas producono le piante durante la fotosintesi?",
+        "options": ["Azoto", "Anidride Carbonica", "Ossigeno", "Idrogeno"],
+        "correctAnswer": "Ossigeno"
+      },
+      {
+        "language": "en",
+        "text": "Which gas do plants produce during photosynthesis?",
+        "options": ["Nitrogen", "Carbon Dioxide", "Oxygen", "Hydrogen"],
+        "correctAnswer": "Oxygen"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Religion",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale religione ha più fedeli al mondo?",
+        "options": ["Islam", "Cristianesimo", "Induismo", "Buddismo"],
+        "correctAnswer": "Cristianesimo"
+      },
+      {
+        "language": "en",
+        "text": "Which religion has the most followers in the world?",
+        "options": ["Islam", "Christianity", "Hinduism", "Buddhism"],
+        "correctAnswer": "Christianity"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Mathematics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il valore di Pi greco (π) approssimato alle prime due cifre decimali?",
+        "options": ["3.12", "3.14", "3.16", "3.18"],
+        "correctAnswer": "3.14"
+      },
+      {
+        "language": "en",
+        "text": "What is the value of Pi (π) approximated to two decimal places?",
+        "options": ["3.12", "3.14", "3.16", "3.18"],
+        "correctAnswer": "3.14"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Sports",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Ogni quanti anni si tengono le Olimpiadi estive?",
+        "options": ["2 anni", "3 anni", "4 anni", "5 anni"],
+        "correctAnswer": "4 anni"
+      },
+      {
+        "language": "en",
+        "text": "How often are the Summer Olympics held?",
+        "options": [
+          "Every 2 years",
+          "Every 3 years",
+          "Every 4 years",
+          "Every 5 years"
+        ],
+        "correctAnswer": "Every 4 years"
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "category": "Cinema",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha diretto la trilogia de \"Il Padrino\"?",
+        "options": [
+          "Martin Scorsese",
+          "Francis Ford Coppola",
+          "Steven Spielberg",
+          "Quentin Tarantino"
+        ],
+        "correctAnswer": "Francis Ford Coppola"
+      },
+      {
+        "language": "en",
+        "text": "Who directed \"The Godfather\" trilogy?",
+        "options": [
+          "Martin Scorsese",
+          "Francis Ford Coppola",
+          "Steven Spielberg",
+          "Quentin Tarantino"
+        ],
+        "correctAnswer": "Francis Ford Coppola"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Geography",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è il deserto più grande del mondo?",
+        "options": ["Sahara", "Gobi", "Antartico", "Arabico"],
+        "correctAnswer": "Antartico"
+      },
+      {
+        "language": "en",
+        "text": "What is the largest desert in the world?",
+        "options": ["Sahara", "Gobi", "Antarctic", "Arabian"],
+        "correctAnswer": "Antarctic"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Physics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha sviluppato la teoria della relatività?",
+        "options": ["Newton", "Einstein", "Galileo", "Tesla"],
+        "correctAnswer": "Einstein"
+      },
+      {
+        "language": "en",
+        "text": "Who developed the theory of relativity?",
+        "options": ["Newton", "Einstein", "Galileo", "Tesla"],
+        "correctAnswer": "Einstein"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Linguistics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale lingua ha più parlanti nativi?",
+        "options": ["Inglese", "Mandarino", "Spagnolo", "Hindi"],
+        "correctAnswer": "Mandarino"
+      },
+      {
+        "language": "en",
+        "text": "Which language has the most native speakers?",
+        "options": ["English", "Mandarin", "Spanish", "Hindi"],
+        "correctAnswer": "Mandarin"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "History",
+    "translations": [
+      {
+        "language": "it",
+        "text": "In quale anno iniziò la Rivoluzione Francese?",
+        "options": ["1776", "1789", "1799", "1804"],
+        "correctAnswer": "1789"
+      },
+      {
+        "language": "en",
+        "text": "In which year did the French Revolution begin?",
+        "options": ["1776", "1789", "1799", "1804"],
+        "correctAnswer": "1789"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Science",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la costante di Planck approssimata?",
+        "options": [
+          "6.62 × 10⁻³⁴ J·s",
+          "9.81 m/s²",
+          "3.14 rad",
+          "1.60 × 10⁻¹⁹ C"
+        ],
+        "correctAnswer": "6.62 × 10⁻³⁴ J·s"
+      },
+      {
+        "language": "en",
+        "text": "What is the approximate value of Planck's constant?",
+        "options": [
+          "6.62 × 10⁻³⁴ J·s",
+          "9.81 m/s²",
+          "3.14 rad",
+          "1.60 × 10⁻¹⁹ C"
+        ],
+        "correctAnswer": "6.62 × 10⁻³⁴ J·s"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Mathematics",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha dimostrato il Teorema di Fermat?",
+        "options": ["Gauss", "Euler", "Andrew Wiles", "Riemann"],
+        "correctAnswer": "Andrew Wiles"
+      },
+      {
+        "language": "en",
+        "text": "Who proved Fermat's Last Theorem?",
+        "options": ["Gauss", "Euler", "Andrew Wiles", "Riemann"],
+        "correctAnswer": "Andrew Wiles"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Literature",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha scritto \"Ulisse\" (Ulysses)?",
+        "options": [
+          "Virginia Woolf",
+          "James Joyce",
+          "T.S. Eliot",
+          "Marcel Proust"
+        ],
+        "correctAnswer": "James Joyce"
+      },
+      {
+        "language": "en",
+        "text": "Who wrote \"Ulysses\"?",
+        "options": [
+          "Virginia Woolf",
+          "James Joyce",
+          "T.S. Eliot",
+          "Marcel Proust"
+        ],
+        "correctAnswer": "James Joyce"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Chemistry",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Quale elemento ha il simbolo chimico \"W\"?",
+        "options": [
+          "Tungsteno",
+          "Wolframio",
+          "Entrambi A e B",
+          "Nessuno dei precedenti"
+        ],
+        "correctAnswer": "Entrambi A e B"
+      },
+      {
+        "language": "en",
+        "text": "Which element has the chemical symbol \"W\"?",
+        "options": ["Tungsten", "Wolfram", "Both A and B", "None of the above"],
+        "correctAnswer": "Both A and B"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Astronomy",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Qual è la galassia più vicina alla Via Lattea?",
+        "options": [
+          "Andromeda",
+          "Triangolo",
+          "Nana del Cane Maggiore",
+          "Nana Ellittica del Sagittario"
+        ],
+        "correctAnswer": "Nana Ellittica del Sagittario"
+      },
+      {
+        "language": "en",
+        "text": "What is the closest galaxy to the Milky Way?",
+        "options": [
+          "Andromeda",
+          "Triangulum",
+          "Canis Major Dwarf",
+          "Sagittarius Dwarf Elliptical"
+        ],
+        "correctAnswer": "Sagittarius Dwarf Elliptical"
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "category": "Art",
+    "translations": [
+      {
+        "language": "it",
+        "text": "Chi ha dipinto \"Guernica\"?",
+        "options": [
+          "Salvador Dalí",
+          "Pablo Picasso",
+          "Joan Miró",
+          "Henri Matisse"
+        ],
+        "correctAnswer": "Pablo Picasso"
+      },
+      {
+        "language": "en",
+        "text": "Who painted \"Guernica\"?",
+        "options": [
+          "Salvador Dalí",
+          "Pablo Picasso",
+          "Joan Miró",
+          "Henri Matisse"
+        ],
+        "correctAnswer": "Pablo Picasso"
+      }
+    ]
+  }
+]

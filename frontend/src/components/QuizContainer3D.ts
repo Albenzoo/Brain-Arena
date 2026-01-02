@@ -34,6 +34,8 @@ export class QuizContainer3D extends THREE.Mesh {
         this.drawStaticBackground();
     }
 
+
+
     public updateQuiz(data: QuizContainerData, fullRedraw = false): void {
         this.currentData = data;
         if (fullRedraw) {

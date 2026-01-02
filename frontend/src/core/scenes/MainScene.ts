@@ -229,7 +229,14 @@ export class MainScene {
     }
 
     private setupRenderer(container: Element, animate: () => void): THREE.WebGLRenderer {
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        const renderer = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true,
+            logarithmicDepthBuffer: true // Migliore gestione profondità per AR
+        });
+
+
+        renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setAnimationLoop(animate);

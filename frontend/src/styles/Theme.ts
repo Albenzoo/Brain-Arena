@@ -30,14 +30,14 @@ export const Colors = {
 export const QuestionPanelTheme = {
     // Background
     background: {
-        gradientStart: '#4A1A99',     // Dark purple
-        gradientEnd: '#6B25C4',       // Primary purple
+        gradientStart: '#2d1a62',     // Dark purple
+        gradientEnd: '#2d1a62',       // Primary purple
     },
 
     // Border
     border: {
-        color: '#FFC93C',             // Gold
-        width: 6,
+        color: '#e9ad41',             // Gold
+        width: 15,
         radius: 24,
     },
 

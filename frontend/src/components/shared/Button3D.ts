@@ -41,6 +41,7 @@ export class Button3D extends THREE.Mesh {
         const { contentWidth, contentHeight } = Button3D.drawButton(canvas, label);
         const texture = new THREE.CanvasTexture(canvas);
         texture.needsUpdate = true;
+        texture.colorSpace = THREE.NoColorSpace;
 
         const geometry = new THREE.PlaneGeometry(
             toWorldWidth(contentWidth, Button3D.PANEL_CONFIG),

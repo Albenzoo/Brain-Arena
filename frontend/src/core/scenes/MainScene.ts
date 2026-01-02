@@ -3,7 +3,6 @@ import { QuizService } from '../../services/QuizService';
 import { GameStateService } from '../../services/GameStateService';
 import { LocalizationService } from '../../services/LocalizationService';
 import { LoadingSpinner3D } from '../../components/shared/LoadingSpinner3D';
-import { AnswerOption3D } from '../../components/AnswerOption3D';
 import type { Question } from '../../models/Question';
 import { QuizUIManager } from '../managers/QuizUIManager';
 import { InteractionManager } from '../managers/InteractionManager';
@@ -38,7 +37,7 @@ export class MainScene {
         this.scene.add(this.loadingSpinner);
 
         // Initialize Managers
-        this.uiManager = new QuizUIManager(this.scene);
+        this.uiManager = new QuizUIManager(this.scene, this.gameStateService);
         this.menuManager = new MenuManager(this.scene);
         this.interactionManager = new InteractionManager(this.renderer, this.camera, this.scene);
 
@@ -107,29 +106,29 @@ export class MainScene {
     private async loadNextQuestion(): Promise<void> {
         const translations = this.localization.getTranslations();
         this.loadingSpinner.show(new THREE.Vector3(0, 1.5, -2));
-        this.uiManager.clearOptions();
-        this.interactionManager.setInteractiveObjects([]);
 
         try {
             const question = await this.quizService.getRandomQuestion();
             this.currentQuestion = question;
 
             const progressText = this.gameStateService.getProgressLabel();
-            this.uiManager.showQuestion(`${progressText}\n\n${question.text}`);
-            this.uiManager.showOptions(question.options ?? []);
+            const fullQuestion = `${progressText}\n\n${question.text}`;
+
+            // Mostra tutto in un unico pannello
+            this.uiManager.showQuestion(fullQuestion, question.options ?? []);
 
             this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());
             this.isProcessingAnswer = false;
 
         } catch (error) {
             console.error('Loading error:', error);
-            this.uiManager.showQuestion(translations.errors.connectionError);
+            this.uiManager.showQuestion(translations.errors.connectionError, []);
         } finally {
             this.loadingSpinner.hide();
         }
     }
 
-    private handleObjectSelection(obj: THREE.Object3D): void {
+    private handleObjectSelection(obj: THREE.Object3D, intersectionPoint: THREE.Vector3): void {
         if (this.menuManager.isMenuVisible()) {
             if (obj instanceof Button3D) {
                 this.menuManager.handleSelection(obj);
@@ -137,46 +136,54 @@ export class MainScene {
             return;
         }
 
-        if (!(obj instanceof AnswerOption3D)) return;
 
-        const panel = obj;
-        const translations = this.localization.getTranslations();
+        const selectedIndex = this.uiManager.getSelectedOptionIndex(intersectionPoint);
 
-        if (!this.gameStateService.isPlaying()) {
-            const label = panel.getLabel();
-            if (label === translations.game.restart || label === translations.game.newGame) {
-                void this.startNewGame();
-            } else if (label === translations.game.mainMenu) {
-                this.showMainMenu();
+        if (selectedIndex >= 0) {
+            // Manage end-game selections
+            if (this.gameStateService.isGameOver() || this.gameStateService.isVictory()) {
+                this.handleEndGameSelection(selectedIndex);
+                return;
             }
-            return;
+
+            // Manage answer selection
+            if (this.gameStateService.isPlaying() && !this.isProcessingAnswer) {
+                this.isProcessingAnswer = true;
+                this.uiManager.setFeedback(selectedIndex);
+                void this.verifyAnswerByIndex(selectedIndex);
+            }
         }
-
-        if (this.isProcessingAnswer) return;
-
-        this.isProcessingAnswer = true;
-        this.uiManager.resetFeedback();
-        this.uiManager.setFeedback(panel, 'selected');
-        panel.scale.set(1.05, 1.05, 1);
-
-        this.verifyAnswer(panel);
     }
-
-    private async verifyAnswer(panel: AnswerOption3D): Promise<void> {
-        if (!this.currentQuestion) return;
+    private handleEndGameSelection(selectedIndex: number): void {
+        const translations = this.localization.getTranslations();
+        if (selectedIndex === 0) {
+            // Restart / New Game
+            void this.startNewGame();
+        } else if (selectedIndex === 1) {
+            // Main Menu
+            this.showMainMenu();
+        }
+    }
+    private async verifyAnswerByIndex(selectedIndex: number): Promise<void> {
+        if (!this.currentQuestion || !this.currentQuestion.options) return;
 
         try {
+            const selectedAnswer = this.currentQuestion.options[selectedIndex];
             const result = await this.quizService.checkAnswer({
                 questionId: this.currentQuestion.id,
-                selectedAnswer: panel.getLabel()
+                selectedAnswer
             });
+
+            //BUGFIX: fix answer index for correct answer
+            const correctIndex = this.currentQuestion.options.indexOf(this.currentQuestion.text);
 
             if (result.isCorrect) {
                 const correctSound = new Audio('/assets/sounds/correct_answer.m4a');
-                this.uiManager.setFeedback(panel, 'correct');
+                this.uiManager.setFeedback(selectedIndex, selectedIndex);
                 correctSound.currentTime = 0;
                 correctSound.play();
                 this.gameStateService.advanceLevel();
+
                 setTimeout(() => {
                     if (this.gameStateService.isVictory()) {
                         this.handleVictory();
@@ -186,7 +193,7 @@ export class MainScene {
                 }, 1500);
             } else {
                 const wrongSound = new Audio('/assets/sounds/wrong_answer.wav');
-                this.uiManager.setFeedback(panel, 'incorrect');
+                this.uiManager.setFeedback(selectedIndex, correctIndex);
                 wrongSound.currentTime = 0;
                 wrongSound.play();
                 this.gameStateService.setGameOver();
@@ -203,8 +210,10 @@ export class MainScene {
 
     private handleGameOver(): void {
         const translations = this.localization.getTranslations();
-        this.uiManager.showQuestion(`${translations.game.gameOver}\n\n${translations.game.gameOverMessage}`);
-        this.uiManager.showOptions([translations.game.restart, translations.game.mainMenu]);
+        this.uiManager.showQuestion(
+            `${translations.game.gameOver}\n\n${translations.game.gameOverMessage}`,
+            [translations.game.restart, translations.game.mainMenu]
+        );
         this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());
     }
 
@@ -213,8 +222,10 @@ export class MainScene {
         const victorySound = new Audio('/assets/sounds/victory.wav');
         victorySound.currentTime = 0;
         victorySound.play();
-        this.uiManager.showQuestion(`${translations.game.victory}\n\n${translations.game.victoryMessage}`);
-        this.uiManager.showOptions([translations.game.newGame, translations.game.mainMenu]);
+        this.uiManager.showQuestion(
+            `${translations.game.victory}\n\n${translations.game.victoryMessage}`,
+            [translations.game.newGame, translations.game.mainMenu]
+        );
         this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());
     }
 

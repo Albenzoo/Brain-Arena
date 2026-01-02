@@ -1,120 +1,95 @@
 import * as THREE from 'three';
-import { QuestionPanel3D } from '../../components/QuestionPanel3D';
-import { AnswerOption3D } from '../../components/AnswerOption3D';
-
+import { QuizContainer3D, type QuizContainerData } from '../../components/QuizContainer3D';
+import type { GameStateService } from '../../services/GameStateService';
 
 export class QuizUIManager {
     private scene: THREE.Scene;
-    private questionPanel: QuestionPanel3D | null = null;
-    private answerPanels: AnswerOption3D[] = [];
+    private quizContainer: QuizContainer3D | null = null;
+    private gameStateService: GameStateService;
 
-    constructor(scene: THREE.Scene) {
+    constructor(scene: THREE.Scene, gameStateService: GameStateService) {
         this.scene = scene;
+        this.gameStateService = gameStateService;
     }
 
-    public showQuestion(text: string): void {
-        if (!this.questionPanel) {
-            this.questionPanel = new QuestionPanel3D(text);
-            this.questionPanel.position.set(0, 1.8, -2.5);
-            this.scene.add(this.questionPanel);
-        } else {
-            this.questionPanel.setQuestion(text);
+    public showQuestion(text: string, options: readonly string[]): void {
+        if (!this.quizContainer) {
+            this.quizContainer = new QuizContainer3D();
+            this.scene.add(this.quizContainer);
         }
-    }
 
-    public showOptions(options: readonly string[]): void {
-        this.clearOptions();
-
-        if (!options.length || !this.questionPanel) return;
-
-        const questionSize = this.getMeshSize(this.questionPanel);
-        const questionBottomY = this.questionPanel.position.y - questionSize.height / 2;
-        const baseZ = this.questionPanel.position.z;
-
-        // Layout configuration    
-        // Use 1 column if there are ≤2 options, otherwise 2 columns
-        const columns = options.length <= 2 ? 1 : Math.min(2, options.length);
-        const verticalMargin = 0.12;
-        const rowGap = 0.1;
-
-        options.forEach((option, index) => {
-            const panel = new AnswerOption3D(option);
-            const panelSize = this.getMeshSize(panel);
-
-            // Calculate grid position
-            const row = Math.floor(index / columns);
-            const column = index % columns;
-
-            // Horizontal centering relative to question panel
-            const maxOffset = Math.max(0, questionSize.width / 2 - panelSize.width / 2);
-            const horizontalStep = columns > 1 ? (maxOffset * 2) / (columns - 1) : 0;
-
-            // If there's a single column, force to center
-            const x = columns === 1
-                ? 0
-                : -maxOffset + column * horizontalStep;
-
-            const y = questionBottomY - verticalMargin - panelSize.height / 2 - row * (panelSize.height + rowGap);
-
-            panel.position.set(x, y, baseZ);
-            this.scene.add(panel);
-            this.answerPanels.push(panel);
+        this.quizContainer.updateQuiz({
+            question: text,
+            options: [...options],
         });
     }
 
-    public clearOptions(): void {
-        this.answerPanels.forEach(panel => {
-            this.scene.remove(panel);
-            panel.geometry.dispose();
-            if (Array.isArray(panel.material)) {
-                panel.material.forEach(m => m.dispose());
-            } else {
-                panel.material.dispose();
-            }
+    public setFeedback(selectedIndex: number, correctIndex?: number): void {
+        if (!this.quizContainer) return;
+
+        const currentData = this.quizContainer['currentData'];
+        if (!currentData) return;
+
+        this.quizContainer.updateQuiz({
+            ...currentData,
+            selectedIndex,
+            correctIndex
         });
-        this.answerPanels = [];
-    }
-    /**
-     * Hides the question panel
-     */
-    public clearQuestion(): void {
-        if (this.questionPanel) {
-            this.scene.remove(this.questionPanel);
-            this.questionPanel.dispose();
-            this.questionPanel = null;
-        }
     }
 
-    /**
-     * Clears everything: question and options
-     */
     public hideAll(): void {
-        this.clearQuestion();
-        this.clearOptions();
+        if (this.quizContainer) {
+            this.scene.remove(this.quizContainer);
+            this.quizContainer.dispose();
+            this.quizContainer = null;
+        }
     }
 
     public getInteractiveObjects(): THREE.Object3D[] {
-        return this.answerPanels;
+        return this.quizContainer ? [this.quizContainer] : [];
     }
 
-    public setFeedback(panel: AnswerOption3D, state: 'idle' | 'selected' | 'correct' | 'incorrect'): void {
-        panel.setFeedbackState(state);
-    }
+    /**
+     * Determines which option was clicked based on the 3D intersection point
+     * @param intersectionPoint The 3D point where the click occurred
+     * @returns The index of the clicked option, or -1 if no option was clicked
+     */
+    public getSelectedOptionIndex(intersectionPoint: THREE.Vector3): number {
+        if (!this.quizContainer) return -1;
 
-    public resetFeedback(): void {
-        this.answerPanels.forEach(p => p.setFeedbackState('idle'));
-    }
+        const currentData = this.quizContainer['currentData'];
+        if (!currentData || !currentData.options) return -1;
 
-    private getMeshSize(mesh: THREE.Mesh): { width: number; height: number } {
-        const geometry = mesh.geometry;
-        if (!geometry.boundingBox) {
-            geometry.computeBoundingBox();
+        // Convert 3D point to container's local coordinates
+        const localPoint = this.quizContainer.worldToLocal(intersectionPoint.clone());
+
+        // Container has dimensions 2.0 x 2.0 (from -1 to +1 on both axes)
+        // Canvas is 1024x1024 pixels
+        // Map local coordinates to canvas coordinates
+        const canvasX = (localPoint.x + 1) * 512; // from -1,1 to 0,1024
+        const canvasY = (1 - localPoint.y) * 512; // from -1,1 to 0,1024 (inverted Y)
+
+        // Options area (based on QuizContainer3D.drawOptions)
+        const startY = 450;
+        const optionHeight = 100;
+        const optionSpacing = 20;
+        const optionWidth = 1024 - 160;
+        const optionX = (1024 - optionWidth) / 2;
+
+        // Check if click is within options area
+        if (canvasX < optionX || canvasX > optionX + optionWidth) {
+            return -1;
         }
-        const box = geometry.boundingBox;
-        if (!box) return { width: 1, height: 0.4 };
-        return {
-            width: box.max.x - box.min.x,
-            height: box.max.y - box.min.y
-        };
+
+        // Calculate which option was clicked
+        for (let i = 0; i < currentData.options.length; i++) {
+            const optionY = startY + i * (optionHeight + optionSpacing);
+
+            if (canvasY >= optionY && canvasY <= optionY + optionHeight) {
+                return i;
+            }
+        }
+
+        return -1;
     }
 }

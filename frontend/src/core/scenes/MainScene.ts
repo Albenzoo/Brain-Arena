@@ -37,7 +37,7 @@ export class MainScene {
         this.scene.add(this.loadingSpinner);
 
         // Initialize Managers
-        this.uiManager = new QuizUIManager(this.scene, this.gameStateService);
+        this.uiManager = new QuizUIManager(this.scene);
         this.menuManager = new MenuManager(this.scene);
         this.interactionManager = new InteractionManager(this.renderer, this.camera, this.scene);
 
@@ -155,7 +155,6 @@ export class MainScene {
         }
     }
     private handleEndGameSelection(selectedIndex: number): void {
-        const translations = this.localization.getTranslations();
         if (selectedIndex === 0) {
             // Restart / New Game
             void this.startNewGame();

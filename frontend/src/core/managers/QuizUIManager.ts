@@ -1,15 +1,12 @@
 import * as THREE from 'three';
-import { QuizContainer3D, type QuizContainerData } from '../../components/QuizContainer3D';
-import type { GameStateService } from '../../services/GameStateService';
+import { QuizContainer3D } from '../../components/QuizContainer3D';
 
 export class QuizUIManager {
     private scene: THREE.Scene;
     private quizContainer: QuizContainer3D | null = null;
-    private gameStateService: GameStateService;
 
-    constructor(scene: THREE.Scene, gameStateService: GameStateService) {
+    constructor(scene: THREE.Scene,) {
         this.scene = scene;
-        this.gameStateService = gameStateService;
     }
 
     public showQuestion(text: string, options: readonly string[]): void {

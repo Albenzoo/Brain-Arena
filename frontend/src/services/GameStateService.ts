@@ -41,7 +41,7 @@ export class GameStateService {
     }
 
     public getProgressLabel(): string {
-        return `Question ${this.currentQuestionIndex + 1}/${this.TOTAL_QUESTIONS}`;
+        return `${this.currentQuestionIndex + 1}/${this.TOTAL_QUESTIONS}`;
     }
 
     public getCurrentIndex(): number {

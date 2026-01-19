@@ -10,7 +10,7 @@ export function setupRightController(controller: THREE.XRTargetRaySpace): THREE.
         const pointerMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
         const pointerLine = new THREE.Line(pointerGeometry, pointerMaterial);
         pointerLine.name = 'controllerPointer';
-        pointerLine.scale.z = 2;
+        pointerLine.scale.z = 4;
         controller.add(pointerLine);
     }
 

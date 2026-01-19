@@ -26,7 +26,7 @@ export class InteractionManager {
         this.renderer = renderer;
         this.camera = camera;
         this.scene = scene;
-        this.raycaster.far = 10;
+        this.raycaster.far = 5; //meter distance for interaction
         this.initializeControllers();
         this.setupMouseInteraction();
     }

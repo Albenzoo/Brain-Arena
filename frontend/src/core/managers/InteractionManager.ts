@@ -26,7 +26,7 @@ export class InteractionManager {
         this.renderer = renderer;
         this.camera = camera;
         this.scene = scene;
-        this.raycaster.far = 5;
+        this.raycaster.far = 10;
         this.initializeControllers();
         this.setupMouseInteraction();
     }
@@ -132,7 +132,5 @@ export class InteractionManager {
         if (this.leftController) {
             (this.leftController as THREE.XRTargetRaySpace).removeEventListener('selectstart', this.onSelectStart);
         }
-        // Note: Window click listener is not removed as we don't store a reference to the bound function.
-        // In production, consider storing the bound reference for proper cleanup.
     }
 }

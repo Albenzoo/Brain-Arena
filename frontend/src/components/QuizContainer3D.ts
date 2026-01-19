@@ -28,7 +28,7 @@ export class QuizContainer3D extends THREE.Mesh {
 
         this.canvas = canvas;
         this.texture = texture;
-        this.position.set(0, 1.8, -2.5);
+        this.position.set(0, 1.65, -2.5);
 
         // Draw static background once
         this.drawStaticBackground();

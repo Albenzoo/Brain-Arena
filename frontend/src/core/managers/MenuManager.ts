@@ -94,7 +94,7 @@ export class MenuManager {
     private createMenu(): void {
         const translations = this.localization.getTranslations();
         const menuZ = -2.5;
-        const menuY = 2;
+        const menuY = 1.8;
 
         // Logo
         this.logo = new LogoPanel3D();

@@ -60,11 +60,11 @@ export class QuizUIManager {
         // Convert 3D point to container's local coordinates
         const localPoint = this.quizContainer.worldToLocal(intersectionPoint.clone());
 
-        // Container has dimensions 2.0 x 2.0 (from -1 to +1 on both axes)
+        // Container has dimensions 1.6 x 1.6 (from -0.8 to +0.8 on both axes)
         // Canvas is 1024x1024 pixels
         // Map local coordinates to canvas coordinates
-        const canvasX = (localPoint.x + 1) * 512; // from -1,1 to 0,1024
-        const canvasY = (1 - localPoint.y) * 512; // from -1,1 to 0,1024 (inverted Y)
+        const canvasX = ((localPoint.x + 0.8) / 1.6) * 1024; // -0.8..+0.8 → 0..1024
+        const canvasY = ((0.8 - localPoint.y) / 1.6) * 1024; // -0.8..+0.8 → 0..1024
 
         // Options area (based on QuizContainer3D.drawOptions)
         const startY = 450;

@@ -21,14 +21,14 @@ export class QuizContainer3D extends THREE.Mesh {
         canvas.height = 1024;
 
         const texture = new THREE.CanvasTexture(canvas);
-        const geometry = new THREE.PlaneGeometry(2.0, 2.0);
+        const geometry = new THREE.PlaneGeometry(1.6, 1.6);
         const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
 
         super(geometry, material);
 
         this.canvas = canvas;
         this.texture = texture;
-        this.position.set(0, 1.5, -2.5);
+        this.position.set(0, 1.8, -2.5);
 
         // Draw static background once
         this.drawStaticBackground();

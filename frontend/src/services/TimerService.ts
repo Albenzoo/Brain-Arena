@@ -3,7 +3,7 @@
  */
 export class TimerService {
     private timeRemaining: number = 0;
-    private maxTime: number = 25;
+    private maxTime: number = 20;
     private isRunning: boolean = false;
     private clockTickSpeedUpAudio = new Audio('/assets/sounds/clock_tick_speed_up.mp3');
     private audioStarted: boolean = false;
@@ -12,9 +12,9 @@ export class TimerService {
 
     /**
      * Start the countdown timer
-     * @param duration Timer duration in seconds (default: 25)
+     * @param duration Timer duration in seconds (default: 20)
      */
-    public start(duration: number = 25): void {
+    public start(duration: number = 20): void {
         this.maxTime = duration;
         this.timeRemaining = duration;
         this.isRunning = true;
@@ -53,7 +53,7 @@ export class TimerService {
         if (this.onTickCallback) {
             this.onTickCallback(Math.max(0, this.timeRemaining));
         }
-        if (this.timeRemaining < 10 && !this.audioStarted) {
+        if (this.timeRemaining < 9 && !this.audioStarted) {
             this.audioStarted = true;
             this.clockTickSpeedUpAudio.play();
         }

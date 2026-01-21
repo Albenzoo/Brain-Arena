@@ -54,7 +54,7 @@ export class CircularTimer3D extends THREE.Group {
     /**
      * Reset the timer to initial state
      */
-    public reset(maxTime: number = 25): void {
+    public reset(maxTime: number = 20): void {
         this.maxTime = maxTime;
         this.timeRemaining = maxTime;
         this.updateVisual();

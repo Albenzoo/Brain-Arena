@@ -9,6 +9,7 @@ const tagline = document.querySelector('.tagline') as HTMLParagraphElement;
 
 const localization = LocalizationService.getInstance();
 let mainScene: MainScene | null = null;
+let lastFrameTime = performance.now();
 
 function updateLandingPageLanguage() {
   const translations = localization.getTranslations();
@@ -22,13 +23,19 @@ function updateLandingPageLanguage() {
 
 function animate() {
   if (mainScene) {
-    mainScene.update(0.016);
+    // Calculate real delta time in seconds
+    const currentTime = performance.now();
+    const deltaTime = (currentTime - lastFrameTime) / 1000;
+    lastFrameTime = currentTime;
+
+    mainScene.update(deltaTime);
     mainScene.renderer.render(mainScene.scene, mainScene.camera);
   }
 }
 
 // Initialize
 mainScene = new MainScene(canvas, animate);
+lastFrameTime = performance.now();
 updateLandingPageLanguage();
 
 // Listen for language changes

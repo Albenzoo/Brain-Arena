@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import { QuizContainer3D } from '../../components/QuizContainer3D';
+import { CircularTimer3D } from '../../components/CircularTimer3D';
 
 export class QuizUIManager {
     private scene: THREE.Scene;
     private quizContainer: QuizContainer3D | null = null;
+    private timer: CircularTimer3D | null = null;
 
     constructor(scene: THREE.Scene,) {
         this.scene = scene;
@@ -19,6 +21,30 @@ export class QuizUIManager {
             question: text,
             options: [...options],
         });
+        this.showTimer();
+    }
+    public showTimer(): void {
+        if (!this.timer) {
+            this.timer = new CircularTimer3D();
+            this.scene.add(this.timer);
+        }
+
+        // Position in top-right corner outside quiz container
+        this.timer.position.set(1, 2.3, -2.5);
+        this.timer.reset();
+        this.timer.visible = true;
+    }
+
+    public updateTimer(timeRemaining: number): void {
+        if (this.timer) {
+            this.timer.setTime(timeRemaining);
+        }
+    }
+
+    public hideTimer(): void {
+        if (this.timer) {
+            this.timer.visible = false;
+        }
     }
 
     public setFeedback(selectedIndex: number, correctIndex?: number): void {
@@ -39,6 +65,11 @@ export class QuizUIManager {
             this.scene.remove(this.quizContainer);
             this.quizContainer.dispose();
             this.quizContainer = null;
+        }
+        if (this.timer) {
+            this.scene.remove(this.timer);
+            this.timer.dispose();
+            this.timer = null;
         }
     }
 
@@ -63,8 +94,8 @@ export class QuizUIManager {
         // Container has dimensions 1.6 x 1.6 (from -0.8 to +0.8 on both axes)
         // Canvas is 1024x1024 pixels
         // Map local coordinates to canvas coordinates
-        const canvasX = ((localPoint.x + 0.8) / 1.6) * 1024; // -0.8..+0.8 → 0..1024
-        const canvasY = ((0.8 - localPoint.y) / 1.6) * 1024; // -0.8..+0.8 → 0..1024
+        const canvasX = ((localPoint.x + 0.8) / 1.6) * 1024; // -0.8..+0.8 -> 0..1024
+        const canvasY = ((0.8 - localPoint.y) / 1.6) * 1024; // -0.8..+0.8 -> 0..1024
 
         // Options area (based on QuizContainer3D.drawOptions)
         const startY = 450;

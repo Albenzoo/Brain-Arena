@@ -8,6 +8,7 @@ import { QuizUIManager } from '../managers/QuizUIManager';
 import { InteractionManager } from '../managers/InteractionManager';
 import { MenuManager, type MenuAction } from '../managers/MenuManager';
 import { Button3D } from '../../components/shared/Button3D';
+import { TimerService } from '../../services/TimerService';
 
 export class MainScene {
     public scene: THREE.Scene;
@@ -23,6 +24,7 @@ export class MainScene {
     private readonly quizService = new QuizService();
     private readonly gameStateService = new GameStateService();
     private readonly localization = LocalizationService.getInstance();
+    private readonly timerService = new TimerService();
     private readonly loadingSpinner = new LoadingSpinner3D();
 
     private currentQuestion: Question | null = null;
@@ -41,6 +43,9 @@ export class MainScene {
         this.menuManager = new MenuManager(this.scene);
         this.interactionManager = new InteractionManager(this.renderer, this.camera, this.scene);
 
+        // Setup Timer Callbacks
+        this.setupTimerCallbacks();
+
         // Setup Events
         this.interactionManager.onObjectSelected(this.handleObjectSelection.bind(this));
         this.menuManager.onAction(this.handleMenuAction.bind(this));
@@ -55,6 +60,7 @@ export class MainScene {
 
     public update(delta: number): void {
         this.loadingSpinner.tick(delta);
+        this.timerService.update(delta);
     }
 
     private setupLighting(): void {
@@ -102,6 +108,39 @@ export class MainScene {
         this.isProcessingAnswer = false;
         await this.loadNextQuestion();
     }
+    /**
+ * Configure timer event callbacks
+ */
+    private setupTimerCallbacks(): void {
+        // Update visual timer on every tick
+        this.timerService.onTick((timeRemaining) => {
+            this.uiManager.updateTimer(timeRemaining);
+        });
+
+        // Handle time expiration (select random answer)
+        this.timerService.onExpire(() => {
+            this.handleTimerExpired();
+        });
+    }
+    /**
+ * Called when timer reaches 0 - selects random answer
+ */
+    private handleTimerExpired(): void {
+        if (!this.currentQuestion || this.isProcessingAnswer) return;
+        if (!this.gameStateService.isPlaying()) return;
+
+        const optionsCount = this.currentQuestion.options?.length ?? 0;
+        if (optionsCount === 0) return;
+
+        // Select random answer
+        const randomIndex = Math.floor(Math.random() * optionsCount);
+
+        console.log(`⏰ Time expired! Auto-selecting random answer: ${randomIndex}`);
+
+        this.isProcessingAnswer = true;
+        this.uiManager.setFeedback(randomIndex);
+        void this.verifyAnswerByIndex(randomIndex);
+    }
 
     private async loadNextQuestion(): Promise<void> {
         const translations = this.localization.getTranslations();
@@ -114,10 +153,12 @@ export class MainScene {
             const progressText = this.gameStateService.getProgressLabel();
             const fullQuestion = `${progressText}\n\n${question.text}`;
 
-            // Mostra tutto in un unico pannello
+            // show everything in one panel
             this.uiManager.showQuestion(fullQuestion, question.options ?? []);
 
             this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());
+            // Start timer for this question (30 seconds)
+            this.timerService.start();
             this.isProcessingAnswer = false;
 
         } catch (error) {
@@ -166,6 +207,7 @@ export class MainScene {
     private async verifyAnswerByIndex(selectedIndex: number): Promise<void> {
         if (!this.currentQuestion || !this.currentQuestion.options) return;
 
+        this.timerService.stop();
         try {
             const selectedAnswer = this.currentQuestion.options[selectedIndex];
             const result = await this.quizService.checkAnswer({
@@ -173,7 +215,6 @@ export class MainScene {
                 selectedAnswer
             });
 
-            //BUGFIX: fix answer index for correct answer
             const correctIndex = this.currentQuestion.options.indexOf(this.currentQuestion.text);
 
             if (result.isCorrect) {
@@ -209,16 +250,20 @@ export class MainScene {
 
     private handleGameOver(): void {
         const translations = this.localization.getTranslations();
+        this.timerService.stop();
         this.uiManager.showQuestion(
             `${translations.game.gameOver}\n\n${translations.game.gameOverMessage}`,
             [translations.game.restart, translations.game.mainMenu]
         );
+        this.uiManager.hideTimer();
+
         this.interactionManager.setInteractiveObjects(this.uiManager.getInteractiveObjects());
     }
 
     private handleVictory(): void {
         const translations = this.localization.getTranslations();
         const victorySound = new Audio('/assets/sounds/victory.wav');
+        this.timerService.stop();
         victorySound.currentTime = 0;
         victorySound.play();
         this.uiManager.showQuestion(
